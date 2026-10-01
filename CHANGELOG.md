@@ -3,6 +3,16 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v1.0.3
+
+### Fixed
+
+- Card icons no longer sit in a bordered tile (1 icon)
+
+### Removed
+
+- The `.project-icon.on-tile` style, so icons can't be put in the bordered tile again
+
 ## v1.0.2
 
 ### Fixed
