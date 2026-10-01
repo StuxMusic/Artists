@@ -3,6 +3,12 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v1.0.1
+
+### Fixed
+
+- The Stux.Music Status card now has a live badge, showing that page's overall status (`data-monitor="stux-music:*"`)
+
 ## v1.0.0
 
 ### Added
