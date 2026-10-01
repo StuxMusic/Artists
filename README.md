@@ -14,8 +14,8 @@ same way as the other Stux.Group listing sites, in Stux.Music blue.
 - Dark and light themes, following your system preference
 - **Live status** on each card, read from [status.stux.music](https://status.stux.music)
   (`StuxMusic/Status`, powered by [GitHup](https://githup.stux.group))
-- **Seasonal overlays** from SeasonalOverlaysLibrary (vendored in `assets/js/`): today's preset
-  plays once per visit (never with reduced motion), and the hero button replays it
+- **Seasonal overlays** from [SeasonalOverlaysLibrary](https://seasonaloverlayslibrary.stuxapis.net)
+  (StuxAPIs): today's preset plays once per visit (never with reduced motion), and the hero button replays it
 - Deployed to [GitHub Pages](https://pages.github.com/) by `.github/workflows/pages.yml`
 - No accounts, no ads, no cookies, no tracking scripts
 

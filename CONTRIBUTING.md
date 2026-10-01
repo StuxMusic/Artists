@@ -40,8 +40,8 @@ a single dependency-free Node script; the only requirement is having Node itself
   hosted icon (Stux Sharp's comes from `sharp.media.stux.music/icon.png`) when one exists.
 - **Only a few things load from elsewhere**, all Stux.Music's own: live status from
   `raw.githubusercontent.com/StuxMusic/Status`, and the logo and artist icons from the
-  `*.media.stux.music` hosts. SeasonalOverlaysLibrary is vendored in
-  `assets/js/seasonal-overlays-library.js`, so it makes no request. If you add another external
+  `*.media.stux.music` hosts. SeasonalOverlaysLibrary loads from
+  `https://seasonaloverlayslibrary.stuxapis.net` (StuxAPIs), and the hero credits it. If you add another external
   load, update the Privacy Policy.
 
 ## Adding or retiring an artist card
@@ -69,7 +69,7 @@ artist page" card) sits under Artists with `data-state="template"`.
 
 ## Seasonal overlays
 
-`main.js` asks the vendored SeasonalOverlaysLibrary for today's preset from its calendar. It plays once per
+`main.js` asks SeasonalOverlaysLibrary for today's preset from its calendar. It plays once per
 browser session (a `sessionStorage` flag), never on its own for people with
 `prefers-reduced-motion`, and the hero button (labelled with today's preset) replays it. If the
 library can't load, the button stays hidden and nothing else changes.

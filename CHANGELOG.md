@@ -3,6 +3,13 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v1.0.2
+
+### Fixed
+
+- The hero credits "SeasonalOverlaysLibrary from StuxAPIs" with a link to its site, like the other Stux.Group listing pages
+- SeasonalOverlaysLibrary loads from https://seasonaloverlayslibrary.stuxapis.net instead of a vendored copy, so it stays up to date; the Privacy Policy lists it
+
 ## v1.0.1
 
 ### Fixed
