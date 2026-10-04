@@ -3,6 +3,12 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v1.0.4
+
+### Changed
+
+- The status card is titled just "Status" (and its icon's alt text "Status icon") instead of repeating "Stux.Music Status"
+
 ## v1.0.3
 
 ### Fixed
