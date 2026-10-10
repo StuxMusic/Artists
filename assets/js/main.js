@@ -189,3 +189,30 @@
     });
   }).catch(function () {});
 })();
+
+// Light/dark toggle in the header: flips the theme and remembers it in this browser (stuxmusic-artists-theme).
+// The <head> script applies a remembered choice before paint; with none, the system theme applies.
+(function () {
+  var btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+  var root = document.documentElement;
+  var mq = window.matchMedia ? window.matchMedia("(prefers-color-scheme: light)") : null;
+  function current() {
+    var t = root.getAttribute("data-theme");
+    return t === "light" || t === "dark" ? t : (mq && mq.matches ? "light" : "dark");
+  }
+  function label() {
+    var next = current() === "light" ? "dark" : "light";
+    btn.title = "Switch to " + next + " mode";
+    btn.setAttribute("aria-label", "Switch to " + next + " mode");
+  }
+  label();
+  if (mq && mq.addEventListener) mq.addEventListener("change", label);
+  btn.addEventListener("click", function () {
+    var next = current() === "light" ? "dark" : "light";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("stuxmusic-artists-theme", next); } catch (e) {}
+    label();
+    try { window.dispatchEvent(new Event("themechange")); } catch (e) {}
+  });
+})();
