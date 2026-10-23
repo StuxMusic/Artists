@@ -1,7 +1,23 @@
 # Changelog
 
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
-project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## v26.10.23
+
+### Added
+
+- A Discord link preview built from Discord components on every page except the 404 page: a card with the site's icon and colour, what the page is, and a couple of link buttons (the home page also lists the artists). The Open Graph fallback stays, and the preview is left out if it would be too big
+- A favicon set: `favicon.ico`, `apple-touch-icon.png` and a `site.webmanifest` (with a maskable icon), linked from the `<head>` of every page, including the 404 page
+- `scripts/build-head.py`, which writes those tags and the Discord preview into every page, and tests for them (`tests/embeds_test.py`) and for the changelog page reading Date Version headings (`tests/changelogs.test.js`)
+- `tests/version.sh`, which checks that `VERSION.md` is a valid Date Version, a real calendar date not in the future, and the same as the newest entry in this changelog
+
+### Changed
+
+- Switched from Semantic Versioning to [Date Versioning](https://datevers.ing): releases are numbered by their UTC release date as `YY.MM.DD`, with `-1`, `-2`… for later releases the same day. This release follows v1.1.0
+- `commit.sh` and `commit.bat` refuse a `VERSION.md` that isn't a valid Date Version or is dated in the future (UTC), and warn when it's dated before today
+- `README.md` and `CONTRIBUTING.md` describe Date Versioning and the release steps
+- CI accepts Date Versions in `VERSION.md` and runs the new tests; the dev server and the site build know about the web manifest
 
 ## v1.1.0
 

@@ -30,7 +30,7 @@ a single dependency-free Node script; the only requirement is having Node itself
   properties in `assets/css/style.css`: dark (`--bg #121214`, `--surface`/`--bg-card #1b1b1f`,
   `--accent #4752ff`) by default, and light (`--bg #f5f5fa`, `--bg-card #fff`, `--accent #000ccc`)
   from the system preference or `<html data-theme="light">`.
-- The sitemap (`sitemap.xml`, `sitemap/index.html`, `robots.txt`) is generated: after adding or removing a page, edit the `PAGES` list in `scripts/build-sitemap.py` and run `python scripts/build-sitemap.py`, then commit the result. Add new root files to the copy step in `.github/workflows/pages.yml`.
+- The sitemap (`sitemap.xml`, `sitemap/index.html`, `robots.txt`) is generated: after adding or removing a page, edit the `PAGES` list in `scripts/build-sitemap.py` and run `python scripts/build-sitemap.py`, then run `python scripts/build-head.py` (it writes the favicon tags and Discord embed into every page's `<head>` between `<!-- head:begin -->` and `<!-- head:end -->`; edit that script, not the blocks), then commit the result. Add new root files to the copy step in `.github/workflows/pages.yml`.
 - Clean URLs use a folder-per-page layout (`legal/privacy/index.html` → `/legal/privacy/`).
 - Shared styles live in `assets/css/style.css`; shared behaviour in `assets/js/main.js`. Copy the
   existing header/footer block when adding a page rather than introducing a templating system.
@@ -80,13 +80,14 @@ All six live under `legal/` (`privacy`, `terms`, `cookies`, `imprint`, `disclaim
 each its own folder with an `index.html`, linked from the **Boring Legal Stuff** hub at
 `legal/index.html`. Keep them in sync with what the site actually does.
 
-## Versioning and changelog
+## Versioning
 
-- The version lives in `VERSION.md` (a bare version string); bump it on every release
-- Every release gets a `CHANGELOG.md` entry using `###` subsections in this order: Added,
-  Changed, Fixed, Removed, Security, Deprecated. Never a bare bullet list under a version
-- `commit.sh` (bash) and `commit.bat` (Windows) read `VERSION.md` and handle the commit and
-  `git tag`; the release workflow publishes a GitHub Release when the tag is pushed
+This project uses [Date Versioning](https://datevers.ing). To release:
+
+1. Add a `## vYY.MM.DD` entry at the top of `CHANGELOG.md`, with its sections in this order: Added, Changed, Fixed, Removed, Security, Deprecated.
+2. Set `VERSION.md` to the same bare version (no `v`): today's **UTC** date as `YY.MM.DD`, or `YY.MM.DD-1`, `-2`… for later releases the same UTC day. Never a future date. Use UTC, not local time: just after midnight in the UK it is still the previous day in UTC.
+3. Run `bash tests/version.sh`.
+4. Run `./commit.sh` (or `commit.bat` on Windows). It checks the version, commits and tags `vYY.MM.DD`, and never pushes.
 
 ## Before committing
 
