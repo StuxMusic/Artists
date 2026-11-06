@@ -3,6 +3,17 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.06-1
+
+### Added
+
+- A `test` branch: work happens there (or on a branch off it), and changes reach `main` only through a pull request from `test`, reviewed and merged by Leo. CONTRIBUTING has a new Branches section, and the README's Versioning section says so
+
+### Changed
+
+- CI runs on pushes to `test` as well as `main`
+- `commit.sh` and `commit.bat` say to push `test` with its tags and open a pull request into `main`, instead of pushing `main`
+
 ## v26.11.06
 
 ### Added
