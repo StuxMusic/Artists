@@ -27,7 +27,7 @@ same way as the other Stux.Group listing sites, in Stux.Music blue.
 |---|---|---|---|
 | Stux.Music Status | Live status and uptime history of Stux.Music and its artists' sites | [status.stux.music](https://status.stux.music) | [StuxMusic/Status](https://github.com/StuxMusic/Status) |
 | Stux Sharp | Electronic music artist and producer, "Music that Sharply Hits" | [stuxsharp.com](https://stuxsharp.com), releases at [sharp.stux.music](https://sharp.stux.music) | private |
-| Claim your artist page | Artistpage, the placeholder page a new artist starts with (Template) | [artistpage.stux.music](https://artistpage.stux.music) | [StuxMusic/artistpage](https://github.com/StuxMusic/artistpage) |
+| Stux.Music Artistpage | The placeholder page a new artist starts with (Template) | [artistpage.stux.music](https://artistpage.stux.music) | [StuxMusic/artistpage](https://github.com/StuxMusic/artistpage) |
 
 This table (and the matching cards on the site) is the source of truth for what's listed. Update
 both together when an artist is added, retired or renamed. Each card shows one badge above its

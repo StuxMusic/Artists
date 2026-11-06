@@ -38,6 +38,11 @@ a single dependency-free Node script; the only requirement is having Node itself
   `dev-server.js` intercepts that one path locally and serves a generated version instead.
 - **Artist icons** go in `assets/img/artists/` (resized to 128 × 128), or use the artist's own
   hosted icon (Stux Sharp's comes from `sharp.media.stux.music/icon.png`) when one exists.
+- Give every card its full name, in its heading and its icon's alt text ("Stux.Music Status", not "Status";
+  alt="Stux Sharp icon"), and its own icon, never a shared or generic one. A card without a logo of its own gets a
+  badge-style icon (Stux.Music's mark on a round avatar, with a badge saying what it is) from
+  `python -I scripts/badge-icons.py stux-music <icon-light.png> assets/img/artists --size=128`, where `<icon-light.png>` is a
+  download of `https://global.media.stux.music/icon-light.png`; add a glyph and file name there for a new one.
 - **Only a few things load from elsewhere**, all Stux.Music's own: live status from
   `raw.githubusercontent.com/StuxMusic/Status`, and the logo and artist icons from the
   `*.media.stux.music` hosts. SeasonalOverlaysLibrary loads from

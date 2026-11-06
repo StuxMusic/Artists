@@ -3,6 +3,25 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.06
+
+### Added
+
+- `scripts/badge-icons.py` (from StuxGroup/Services, originally TheRidgwells/Projects, set to Stux.Music's colours) builds
+  badge-style icons for cards without a logo of their own: Stux.Music's mark on a round avatar, with a badge in the
+  bottom-right corner saying what the card is
+
+### Changed
+
+- **Every card uses its full name, with its own icon.** "Status" is Stux.Music Status again, with a heartbeat badge on the
+  Stux.Music mark, and "Claim your artist page" is Stux.Music Artistpage (still inviting you to claim one), with a
+  microphone badge instead of the plain Stux.Music icon. Each icon's alt text uses the same full name, and the README
+  table and CONTRIBUTING match
+
+### Removed
+
+- `assets/img/artists/status.svg`, replaced by the Stux.Music Status badge icon
+
 ## v26.10.23
 
 ### Added
