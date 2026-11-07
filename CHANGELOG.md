@@ -3,6 +3,16 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.07
+
+### Added
+
+- The "Stux.Music" pill above the hero headline is now also a live status badge, linking to status.stux.music. Once
+  the status loads it shows just the state (All operational, Degraded, Partial outage or Major outage) in the status
+  badge colours, with a dot that pulses while everything is up (not with reduced motion). It reuses the cards'
+  `summary.json` fetch, keeps the eyebrow's size and shape, and stays the plain "Stux.Music" pill if the status can't
+  load. CONTRIBUTING documents it
+
 ## v26.11.06-1
 
 ### Added
