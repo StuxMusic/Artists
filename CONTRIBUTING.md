@@ -72,6 +72,21 @@ artist page" card) sits under Artists with `data-state="template"`.
    class and `data-state="discontinued"`, drop any dead Website link, and add a one-line `<p class="discontinued-note">` saying why
 6. Update the hero's artist count if it changed
 
+## Live status eyebrow
+
+The pill above the hero headline (`<a class="eyebrow" data-status-eyebrow="stux-music:*">`) doubles as a live status
+badge. It links to [status.stux.music](https://status.stux.music), and `assets/js/main.js` fills it from the same
+`summary.json` fetch the cards' live badges use, so there's no second request.
+
+- `data-status-eyebrow="<source>:*"` shows the status page's overall status: All operational, Degraded, Partial outage
+  or Major outage. `"<source>:<slug>"` shows one monitor: Online, Degraded or Offline. `<source>` is a key of `SOURCES`
+- Once the status loads, the pill shows only the state (in `.eyebrow-state`), never the brand: `.eyebrow-label` is
+  hidden. It takes the class `up`, `degraded` (also used for a partial outage) or `down`, and the status badge colours
+- If the fetch fails it stays the plain "Stux.Music" eyebrow. Keep the brand in `.eyebrow-label` so that fallback works
+- The eyebrow keeps its own size, padding, font and pill shape (`.hero .eyebrow`); only its colours and the 7px dot
+  come from the status badges. The dot pulses (`badge-pulse`) when up, and not under `prefers-reduced-motion`
+- Check changes in dark and light, and with an outage: stub `fetch` to return `{"status":"down","monitors":[]}`
+
 ## Seasonal overlays
 
 `main.js` asks SeasonalOverlaysLibrary for today's preset from its calendar. It plays once per
