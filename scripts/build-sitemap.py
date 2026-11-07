@@ -7,7 +7,7 @@ touched its source file (left out if the file has no history yet). URLs always u
 the site's production address (from CNAME). The HTML page reuses the Boring Legal Stuff hub as
 its layout (header, theme, footer).
 
-Copyright (c) 2026 Stux.Group. All Rights Reserved.
+Copyright (c) 2026 Stux.Music. All Rights Reserved.
 """
 import html
 import re
