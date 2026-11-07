@@ -3,6 +3,13 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.07-2
+
+### Changed
+
+- The copyright notice in the footer of every page (11 pages) credits Stux.Music rather than Stux.Group
+- The disclaimer says the Stux.Music name, logo and branding are © Stux.Music (it said © Stux.Group)
+
 ## v26.11.07-1
 
 ### Changed
