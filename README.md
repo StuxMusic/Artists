@@ -54,7 +54,7 @@ Work happens on the `test` branch: releases are committed and tagged there, and 
 
 ## License
 
-&copy; 2026 Stux.Group. All rights reserved. This repository is not licensed for reuse or
+&copy; 2026 Stux.Music. All rights reserved. This repository is not licensed for reuse or
 redistribution. Lato and Poppins (`assets/fonts/`) are under the SIL Open Font License.
 
 ---

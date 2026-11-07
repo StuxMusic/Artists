@@ -3,6 +3,12 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.07-1
+
+### Changed
+
+- The copyright holder is Stux.Music rather than Stux.Group, in `LICENSE`, `README.md`, `scripts/build-head.py` and `scripts/build-sitemap.py`
+
 ## v26.11.07
 
 ### Added

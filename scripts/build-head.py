@@ -11,7 +11,7 @@ The block sits between <!-- head:begin --> and <!-- head:end --> just before </h
     fallback. Left out (an HTML comment instead) when over 3,000 bytes.
     Spec: https://docs.discord.com/developers/link-previews/component-embeds
 
-Copyright (c) 2026 Stux.Group. All Rights Reserved.
+Copyright (c) 2026 Stux.Music. All Rights Reserved.
 """
 import html
 import json
