@@ -75,7 +75,7 @@ def home_components():
     return [
         section(f"# [{md(SITE_NAME)}]({BASE_URL}/)\n**Every Stux.Music artist, in one place**\n"
                 "The directory of the artists on Stux.Music, each with their own site and releases, "
-                "and live status where we check it.\n-# 1 artist listed · status checked every 5 minutes"),
+                "and live status where we check it.\n-# 1 artist listed · status checked regularly"),
         text("### Artists\n[Stux Sharp](https://stuxsharp.com) · [Claim your artist page](mailto:hello@stux.music)"
              .replace("(mailto:hello@stux.music)", f"({BASE_URL}/#contact)")),
         buttons([("Browse artists", f"{BASE_URL}/#artists"), ("Live status", "https://status.stux.music")]),
