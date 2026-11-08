@@ -3,6 +3,14 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.08
+
+### Changed
+
+- The status card, the live status band and the Discord link preview say Stux.Music Status checks every site
+  "regularly" instead of "every 5 minutes": GitHub runs the status checks on a best-effort schedule, often only every few
+  hours, and the status page now shows the measured rhythm
+
 ## v26.11.07-2
 
 ### Changed
