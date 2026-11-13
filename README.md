@@ -61,4 +61,4 @@ redistribution. Lato and Poppins (`assets/fonts/`) are under the SIL Open Font L
 
 *Powering the Stux.Group Ecosystem | Part of the Stux.Group Brand of Companies.*
 
-Stux.Music is operated by Stux Group Ltd, a company registered in England and Wales (company no. 13160574), registered office 124 City Road, London, EC1V 2NX, England.
+Stux.Music is operated by Stux Group Ltd, a company registered in England and Wales (company no. 13160574), registered office 124 City Road, London, EC1V 2NX, England, United Kingdom.

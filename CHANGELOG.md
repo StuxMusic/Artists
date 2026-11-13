@@ -3,6 +3,12 @@
 All notable changes to Stux.Music Artists (artists.stux.music) are documented here. This
 project adheres to [Date Versioning](https://datevers.ing) since v26.10.23 (`YY.MM.DD`, the UTC release date, with `-1`, `-2`… for later releases the same day); earlier releases used [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v26.11.13-1
+
+### Fixed
+
+- The registered office ends in "United Kingdom": 124 City Road, London, EC1V 2NX, England, United Kingdom
+
 ## v26.11.13
 
 ### Changed
