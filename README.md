@@ -40,6 +40,7 @@ of precedence), otherwise a live Online / Degraded / Offline badge when it has a
 ```
 ./dev-server.sh          # http://127.0.0.1:8080, DEV_MODE forced on
 ./dev-server.sh 3000 --no-dev-mode
+./dev-server.sh --lan            # also reachable from phones/tablets on your network
 ```
 
 On Windows, use `dev-server.bat` instead. No `npm install` needed: the dev server is a single
@@ -50,7 +51,7 @@ dependency-free Node script (`dev-server.js`); Node just needs to be installed. 
 
 This project uses [Date Versioning](https://datevers.ing): each release is numbered by its UTC release date as `YY.MM.DD` (for example `26.10.23`), with `-1`, `-2`… for later releases the same day. See [CHANGELOG.md](CHANGELOG.md) for what changed in each release, and [CONTRIBUTING.md](CONTRIBUTING.md) for the release steps. After the commit script, `git push origin test --tags` publishes a GitHub Release from the matching `CHANGELOG.md` section.
 
-Work happens on the `test` branch: releases are committed and tagged there, and go live when Leo merges its pull request into `main`. See [CONTRIBUTING.md](CONTRIBUTING.md#branches).
+Work and releases happen on the `test` branch. Changes reach `staging` and then `main` (live) only through pull requests, which Leo reviews and merges: `test` → `staging` → `main`. See [CONTRIBUTING.md](CONTRIBUTING.md#branches-and-going-live).
 
 ## License
 
