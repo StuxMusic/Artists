@@ -6,19 +6,25 @@
 // forced on for local runs without ever touching (or risking a commit of)
 // the real, gitignored-free, always-`false` file in assets/js/dev-mode.js.
 //
-// Usage: node dev-server.js [port] [--no-dev-mode]
+// Usage: node dev-server.js [port] [--no-dev-mode] [--lan]
+//   --lan  listen on all interfaces so phones/tablets on your network can connect
+//          (prints the addresses to open); default is 127.0.0.1 only
 const http = require("http");
 const fs = require("fs");
+const os = require("os");
 const path = require("path");
 
 const ROOT = __dirname;
 const args = process.argv.slice(2);
 let port = 8080;
 let devMode = true;
+let lan = false;
 
 for (const arg of args) {
   if (arg === "--no-dev-mode") {
     devMode = false;
+  } else if (arg === "--lan") {
+    lan = true;
   } else if (/^\d+$/.test(arg)) {
     port = parseInt(arg, 10);
   } else {
@@ -81,8 +87,21 @@ const server = http.createServer((req, res) => {
   fs.createReadStream(found).pipe(res);
 });
 
-server.listen(port, "127.0.0.1", () => {
+// This machine's IPv4 addresses, minus loopback (what ipconfig / ifconfig / hostname -I list).
+function lanAddresses() {
+  return Object.values(os.networkInterfaces())
+    .flat()
+    .filter((a) => a && (a.family === "IPv4" || a.family === 4) && !a.internal)
+    .map((a) => a.address);
+}
+
+server.listen(port, lan ? "0.0.0.0" : "127.0.0.1", () => {
   console.log(`Stux.Music Artists running at http://127.0.0.1:${port}`);
+  if (lan) {
+    console.log("On your local network (--lan), open one of these on the other device:");
+    for (const a of lanAddresses()) console.log(`    http://${a}:${port}`);
+    console.log("  (usually the 192.168.x.x one; allow Node through the firewall if asked)");
+  }
   if (devMode) {
     console.log("DEV_MODE forced on for this run (banner shows) — pass --no-dev-mode to disable.");
   } else {
